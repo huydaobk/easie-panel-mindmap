@@ -11,70 +11,43 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-        }
-        .header {
-            background: rgba(255,255,255,0.05);
-            padding: 20px 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .header h1 {
-            color: #fff;
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-        .header p {
-            color: rgba(255,255,255,0.6);
-            font-size: 14px;
-        }
-        .header a {
-            color: #4fc3f7;
-            text-decoration: none;
-        }
-        .header a:hover {
-            text-decoration: underline;
         }
         #mindmap-container {
-            padding: 20px;
-            min-height: calc(100vh - 100px);
+            width: 100vw;
+            height: 100vh;
         }
         .markmap {
-            background: rgba(255,255,255,0.98);
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            min-height: 600px;
+            width: 100%;
+            height: 100%;
+            background: #fff;
         }
-        footer {
-            background: rgba(255,255,255,0.03);
-            padding: 15px 40px;
-            text-align: center;
-            color: rgba(255,255,255,0.4);
-            font-size: 12px;
-            border-top: 1px solid rgba(255,255,255,0.05);
+        .markmap svg {
+            width: 100% !important;
+            height: 100% !important;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🧱 EASIE Sandwich Panel Knowledge Mindmap</h1>
-        <p>Source: EASIE FP7 Project (Grant No. 213302), BS EN 14509-2013, European Recommendations</p>
-        <p style="margin-top:10px;">📝 Edit on <a href="https://github.com/huydaobk/easie-panel-mindmap">GitHub</a> | Last updated: 2026-04-28</p>
-    </div>
     <div id="mindmap-container">
         <div class="markmap"># EASIE PANEL - SANDWICH PANEL KNOWLEDGE MINDMAP
 
 ## 1. SANDWICH PANEL BASICS
 
 ### 1.1 What is a Sandwich Panel?
-- Composite structural element: 2 thin faces + 1 thick core
+- Composite: 2 thin faces + 1 thick core bonded together
 - Analogous to I-beam: faces carry tension/compression, core carries shear
 - Up to 90% weight savings vs conventional steel
 
 ### 1.2 Sandwich Principle
-- Separating two materials with lightweight core increases stiffness/strength at low cost
+- Lightweight core separates materials → dramatically increases stiffness/strength
 - Environmental benefit: lighter structures = less energy over 25 years
 
 ### 1.3 Three Essential Components
@@ -82,60 +55,50 @@
 - Core: PU, PUR, PVC, PET, PES, balsa - supports skins, prevents buckling
 - Adhesive: Bonds faces to core - de-bonding = catastrophic failure
 
-### 1.4 Structural Behavior Under Loading
+### 1.4 Structural Behavior
 - Bending: Compression upper face, tension lower face, shear in core
-- Shear: Core resists sliding (like pages of a book)
-- Key terms: Stress, Strain, Elastic Modulus, Yield Strength
+- Shear: Core resists sliding between faces
+- Compression: Core supports faces against wrinkling
 
 ## 2. CORE MATERIALS
 
-### 2.1 Polyurethane (PU) / PUR Foam
+### 2.1 PU / PUR Foam
 - Density: 34-42 daN/m³
-- Shear strength: 0.04-0.14 MPa
-- Compression: 0.1 MPa
-- Shear modulus: 2.41-2.96 MPa
+- Shear: 0.04-0.14 MPa | Compression: 0.1 MPa
 - Thicknesses: 60, 80, 100, 130, 140, 200mm
 
-### 2.2 Mineral Wool (MW) Core
-- Density: 100-125 daN/m³
-- Shear strength: 0.080 MPa
-- Shear modulus: 5.73-12.49 MPa
-- Fire resistant, moisture sensitive
+### 2.2 Mineral Wool (MW)
+- Density: 100-125 daN/m³ | Shear: 0.080 MPa
+- Fire resistant but moisture sensitive
 
-### 2.3 PVC/IPN Foam (Divinycell H)
-- Cross-linked polyurea + PVC (IPN)
-- Good mechanical performance-to-weight ratio
+### 2.3 PVC/IPN Foam
+- Divinycell H series - good performance/weight
 
-### 2.4 PET Foam (Divinycell P)
-- Thermoplastic polyethylene terephthalate
-- Excellent thermal stability
+### 2.4 PET Foam
+- Divinycell P - excellent thermal stability
 
-### 2.5 PES Foam (Divinycell F)
-- Highest service temperature for thermoplastics
-- Fire/smoke/toxicity properties excellent
+### 2.5 PES Foam
+- Divinycell F - highest service temperature, fire resistant
 
-### 2.6 Core Comparison Table
-- PU: 34-42 daN/m³, 0.04-0.14 MPa, lightweight
-- MW: 100-125 daN/m³, 0.08 MPa, fire resistant
-- PVC: high performance, higher density
-- PET: moderate, thermal stability
-- Balsa: moderate, renewable
+### 2.6 Core Comparison
+- PU: lightweight, versatile
+- MW: fire resistant
+- PVC/PET/PES: higher performance
 
 ## 3. STANDARDS & TESTING (EN 14509)
 
-### 3.1 BS EN 14509-2013
+### 3.1 BS EN 14509:2013
 - Factory-made sandwich panels for wall and roof cladding
-- Mechanical properties testing (Table 4)
-- IT-Tests for CE Marking
+- CE Marking requirements
 
 ### 3.2 Key Test Methods
-- Full-Scale Bending Tests: Q_el, Q_c, failure modes
-- Large Scale Shear Tests: 3m specimen, Q_c,v
-- Small-Scale Tests: tensile, compression, shear, creep
+- Full-Scale Bending: Q_el, Q_c, failure modes
+- Large Shear Tests: 3m specimen
+- Small-Scale: tensile, compression, shear, creep
 
-### 3.3 Design by Testing (DBT) Process
-- Step 1: Get mechanical properties (f_yf, f_cv, f_cc, G_c)
-- Step 2: Statistical evaluation (k = 0.85 for 1 test, 0.90 for 2)
+### 3.3 Design by Testing (DBT)
+- Step 1: Get mechanical properties
+- Step 2: Statistical evaluation (k=0.85 for 1 test, 0.90 for 2)
 - Step 3: Calculate stresses and deflections
 - Step 4: Superposition of load cases
 - Step 5: Identify decisive limit state
@@ -143,234 +106,138 @@
 ## 4. DESIGN METHODS
 
 ### 4.1 Limit State Design
-- ULS (Ultimate): Failure prevention
-- SLS (Service): Deflection L/200
+- ULS: Failure prevention
+- SLS: Deflection L/200
 
 ### 4.2 Bending Capacity
 - M_Rd = f_yf * Z / gamma_M
-- Face yielding check
-- Wrinkling check
+- Face yielding and wrinkling checks
 
 ### 4.3 Shear Capacity
 - V_Rd = f_cv * A_c / gamma_M
-- Core shear failure mode
 
-### 4.4 Deflection (SLS)
+### 4.4 Deflection
 - delta_total = delta_bending + delta_shear
-- Limit: L/200
 
-### 4.5 Key Design Parameters
-- Panel thickness: 60-200mm
-- Face thickness: 0.40-0.75mm
-- Face yield: 280-320 MPa
-
-## 5. PRACTICAL EXAMPLES (EASIE D2.4)
+## 5. PRACTICAL EXAMPLES
 
 ### 5.1 Example n1 - Roof PU 60mm
-- TKK Helsinki laboratory
-- Core density: 34-42 daN/m³
-- Shear strength: 0.1366 MPa
-- Failure: Buckling upper face
-- Shear collapse: ~1148 daN
+- TKK Helsinki | Buckling failure
 
 ### 5.2 Example n2 - Roof PU 100mm
-- Shear strength: 0.1124 MPa
-- Failure: Buckling upper face
+- Buckling upper face
 
-### 5.3 Example n3 - Cladding MW 140mm
-- Karlsruhe laboratory
-- Succion (negative) loading
-- MW type 12.5, density 125 daN/m³
+### 5.3 Example n3 - MW 140mm
+- Karlsruhe | Succion loading
 
-### 5.4 Example n4 - Cladding PU 80mm
-- Shear (nominal): 0.04 MPa
+### 5.4 Example n4 - PU 80mm
 - Shear (measured): 0.0773 MPa
 - Spans: 2.14-8.24m
-- Failure: Shear, wrinkling
 
-### 5.5 Example n5 - Cladding PU 130mm
+### 5.5 Example n5 - PU 130mm
 - Shear (measured): 0.0718 MPa
-- Compression (measured): 0.1293 MPa
 
-### 5.6 Example n6 - Cladding PU 200mm
-- Shear (measured): 0.0972 MPa
-- Panel weight: ~21.43 daN/m²
+### 5.6 Example n6 - PU 200mm
+- Weight: ~21.43 daN/m²
 
-### 5.7 Example n18 - Cladding MW 60mm
+### 5.7 Example n18 - MW 60mm
 - Shear (measured): 0.141 MPa
-- Shear modulus: 12.49 MPa
 
-### 5.8 Example n20 - Cladding MW 100mm
-- Succion loading
-- Fastener assembly tensile resistance tested
+### 5.8 Example n20 - MW 100mm
+- Succion | Fastener tested
 
 ## 6. FIRE SAFETY & DURABILITY
 
 ### 6.1 Fire Performance
-- PES: excellent fire/smoke/toxicity
-- PU/PUR: varies by formulation
+- PES: excellent fire/smoke properties
 - MW: inherently fire-resistant
-- PVC: good fire performance
 
-### 6.2 Durability Testing (EASIE WP4)
-- DUR1: 75°C, RH < 15% (dry heat)
-- DUR2: 65°C, RH > 95% (humid heat)
-- Properties monitored: wrinkling, shear, tensile, compression
+### 6.2 Durability Tests
+- DUR1: 75C, RH<15% (dry)
+- DUR2: 65C, RH>95% (humid)
 
 ### 6.3 Ageing Results
-- PU: Properties reduce then stabilize
-- MW: High humidity causes significant reduction
-- 30-year-old panels still meet current requirements
-
-### 6.4 Microclimate inside Panels
-- Internal conditions highly variable
-- Finland example: External T = [-20, 66]°C
+- PU: stabilizes after initial drop
+- MW: humidity causes degradation
+- 30-year panels still meet requirements
 
 ## 7. MANUFACTURING & QC
 
-### 7.1 Factory Production (EN 14509)
-- Controlled manufacturing environment
+### 7.1 EN 14509 Requirements
+- Controlled manufacturing
 - Quality management system
-- Traceability of materials
 
-### 7.2 Key Quality Parameters
-- Face: material grade, thickness, coating, profile
-- Core: density, cell structure, bond quality
-- Panel geometry: thickness, length, squareness
+### 7.2 Quality Parameters
+- Face: material, thickness, coating
+- Core: density, bond quality
+- Geometry: tolerances
 
-### 7.3 Handling & Storage
-- Lifting techniques to prevent bending
-- Storage: horizontal, dry, elevated
-- Protection during transport
-
-### 7.4 Installation Requirements
+### 7.3 Handling & Installation
+- Lift to prevent bending
 - Proper joint sealing
-- Correct fastener spacing
-- Thermal bridge mitigation
+- Fastener spacing
 
-## 8. OPENINGS IN SANDWICH PANELS (EASIE WP1 - D1.2)
+## 8. OPENINGS (EASIE WP1 - D1.2)
 
 ### 8.1 Classification
-- Small opening: Width < panel width, does NOT cut joint
-- Large opening: Width = or > panel width
+- Small: width < panel, no joint cut
+- Large: width = or > panel
 
-### 8.2 Small Openings WITHOUT Reinforcement
-- Reduction factor kF for wrinkling
-- Reduction factor kC for shear
-- Table: β = b/B from 0 to 0.8
+### 8.2 Small Openings
+- Reduction factors kF (wrinkling), kC (shear)
+- Based on beta = b/B
 
-### 8.3 Load Transfer to Adjacent Panels
-- Loads transfer via longitudinal joints
-- Beam model: panels + joint elements
-- Simplified: ΔM <= 2*M_joint → no frame needed
+### 8.3 Load Transfer
+- Via longitudinal joints to adjacent panels
+- Delta_M less than 2*M_joint: no frame needed
 
-### 8.4 Torsional Stiffness
-- C_T = formula for torsional rigidity
-- Combined shear: τ = τ_Cv + τ_T
-
-### 8.5 Eccentric Openings
-- k_F,ecc formula for non-symmetric openings
-
-### 8.6 Profiled Panels (Roof)
-- Flat part: 3-6% decrease in capacity
+### 8.4 Profiled Panels
+- Flat part: 3-6% decrease
 - Profiled part: 20-35% decrease
-- m-factor for shear: 0.85 (flat), 0.70 (circular), 0.60 (rectangular)
 
-### 8.7 Panels WITH Reinforcement
-- Adapter profiles: carry and transfer load
-- Punctual fixings: distribute concentrated loads
-- Bonded frames: STABILIZE only, NOT carry load directly
-- Key: Frame must stabilize face in zone >= 5cm
+### 8.5 Reinforcement Types
+- Adapter profiles: carry load
+- Punctual fixings: distribute load
+- Bonded frames: STABILIZE only (>= 5cm zone)
 
-### 8.8 Large Openings - Adapter Profiles
-- Beam model verification
-- Check: Wrinkling, Shear, Joint failure
+### 8.6 Design Checks
+- Wrinkling | Shear | Joint failure
 
-### 8.9 Design Recommendations
-- Small openings: Calculate with reduction factors
-- Large openings: Frame stabilizes, not carries
-- Minimum 5cm zone around opening
-- Verify all failure modes
-
-## 9. FRAMELESS BUILDING DESIGN (EASIE D3.4)
+## 9. FRAMELESS BUILDINGS (D3.4)
 
 ### 9.1 Structural System
-- Sandwich panels as primary structural elements
-- No additional framing
-- Load paths: roof → wall → foundation
+- Panels as primary structural elements
+- Load: roof to wall to foundation
 
 ### 9.2 Load Types
-- Transverse load: perpendicular to panel face
-- Axial load: in-plane compression
-- In-plane shear: diaphragm action
-
-### 9.3 Key Parameters
-- A_C: Cross-section area of core
-- G_C: Shear modulus of core
-- k_v: Fastening stiffness
-- k_J: Joint connection stiffness
+- Transverse | Axial | In-plane shear
 
 ## 10. REFERENCE DOCUMENTS
 
 ### 10.1 EASIE Documents
-- D1.2: Openings calculation models
-- D2.3 Part 1 & 2: Panels with flat/ribbed faces
-- D2.4: Design by testing examples
-- D3.4: Frameless buildings design
-- D4.2: Ageing effect model
-- D5.1: Good practice guidelines
+- D1.2: Openings | D2.4: Examples
+- D3.4: Frameless buildings | D5.1: Good practice
 
 ### 10.2 Standards
-- BS EN 14509:2013
-- EN 10143:1993
-- EN 10346:2009
+- BS EN 14509:2013 | EN 10143 | EN 10346
 
-## 11. KEY FORMULAS
+## 11. FAILURE MODES
 
-### 11.1 Bending Capacity
-- M_Rd = f_yf * Z / γ_M
+### 11.1 Summary
+- Face Yielding | Face Wrinkling
+- Core Shear | Core Compression
+- Delamination | Global Buckling
 
-### 11.2 Shear Capacity
-- V_Rd = f_cv * A_c / γ_M
+## 12. DESIGN CHECKLIST
 
-### 11.3 k-Factor
-- 1 test: k = 0.85 (bending), 0.83 (shear)
-- 2 tests: k = 0.90
+### 12.1 ULS Checks
+- Bending | Shear | Compression | Wrinkling
 
-### 11.4 Deflection
-- δ_total = δ_bend + δ_shear
+### 12.2 SLS Checks
+- Deflection L/200
 
-## 12. FAILURE MODES
-
-### 12.1 Summary Table
-- Face Yielding: Overload → increase face thickness
-- Face Wrinkling: Core too weak → increase core density
-- Core Shear: Core failure → increase core shear strength
-- Core Compression: Concentrated load → increase core compression
-- Delamination: Poor bond, moisture → QC, edge protection
-- Global Buckling: Slender panel → increase thickness
-
-## 13. DESIGN CHECKLIST
-
-### 13.1 ULS Checks
-- Bending moment capacity
-- Shear capacity
-- Compression capacity
-- Wrinkling stress check
-- Global buckling check
-
-### 13.2 SLS Checks
-- Deflection at midspan (L/200)
-- Deflection at support
-
-### 13.3 Durability Checks
-- Ageing effects
-- Moisture conditions
-- Fire resistance
-- Service life expectations</div>
+### 12.3 Durability
+- Ageing | Moisture | Fire | Service life</div>
     </div>
-    <footer>
-        Compiled from EASIE FP7 Project Research (Grant No. 213302) | For updates, edit source files on GitHub
-    </footer>
 </body>
 </html>
