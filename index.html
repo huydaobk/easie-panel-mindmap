@@ -57,8 +57,8 @@
 - Surface geometry: flat, ribbed, profiled, micro-rib
 
 ### B.2 Core Materials
-- **PUR/PIR Foam**: density 34-42 kg/m³, shear 0.04-0.14 MPa
-- **Mineral Wool (MW)**: density 100-125 kg/m³, shear 0.08 MPa, fire-resistant
+- **PUR/PIR Foam**: density 34-42 kg/m3, shear 0.04-0.14 MPa
+- **Mineral Wool (MW)**: density 100-125 kg/m3, shear 0.08 MPa, fire-resistant
 - **EPS**: economical, moisture-sensitive
 - **PVC/IPN (Divinycell H)**: high performance/weight ratio
 - **PET (Divinycell P)**: excellent thermal stability
@@ -83,7 +83,7 @@
 - **DBT**: test-based route to derive design resistance; complements DBC
 - Needs a **test matrix** to represent a product family (thickness/profile/core/fasteners)
 - EASIE reports **good correlation** and comparable safety levels
-- Sources: *Design-by-Testing---Calculation-of-Sandwich-Panels.pdf*; *EASIE PUBLISHABLE SUMMARY REPORT.pdf*; *European Recommendations for Sandwich Panels Part 1 Design. ECCSCIB Report – CIB Publication.pdf*
+- Sources: *Design-by-Testing---Calculation-of-Sandwich-Panels.pdf*; *EASIE PUBLISHABLE SUMMARY REPORT.pdf*; *European Recommendations for Sandwich Panels Part 1 Design. ECCSCIB Report - CIB Publication.pdf*
 
 
 ### C.1 EN 14509:2013 Framework
@@ -145,10 +145,14 @@
 ### D.5 Failure Modes
 - **Face yielding**: plastic collapse
 - **Wrinkling**: local buckling of compressed face
+- **Shear buckling**: instability of core/face under shear
+- **Global buckling**: overall panel instability under compression
+- **Local vs global buckling interaction**: stiffened panels may fail globally
 - **Core shear failure**: shear cracking/yielding
 - **Tensile failure in core**: rare but critical
-- **Debonding/delamination**: adhesive failure
-- **Fastener/joint failures**: pull-through, shear
+- **Debonding/delamination**: adhesive failure (face-core separation)
+- **Fastener/joint failures**: pull-through, pull-out, shear
+- **Local face yielding**: concentrated load / fastener pressure
 - **Local crushing**: support effects, point loads
 
 ### D.6 Limit States
@@ -178,7 +182,9 @@
 
 ### E.2 Fastener Design
 - Screw types and embedment
-- Pull-out resistance
+- **Pull-out resistance**: NRk,II from substructure (EN 1993-1-3, EN 1995-1-1)
+- **Pull-through resistance**: NRk,I through external face
+- **Local face yielding**: under fastener heads
 - Shear resistance
 - Thermal expansion accommodation
 
@@ -202,11 +208,15 @@
 ## F. Openings, Penetrations & Discontinuities
 
 ### F.Y Thermal and local detailing effects
+- **Flashing strategy**: sealing panel-to-opening interfaces
+- **Thermal bridges by flashings**: conductivity spikes at edges
+- **Load redistribution around openings**: via longitudinal joints
+- **Click-click fast installation**: integrated systems (e.g., FECH Jet)
 - Thermal bridges at flashings
 - Reinforcement around openings
 
 
-### F.X Openings — small/large + reinforcement
+### F.X Openings - small/large + reinforcement
 - Small openings: strength models
 - Large openings: design guidelines
 - Reinforcement: adapter profiles / punctual fixings / bonded frames
@@ -214,10 +224,11 @@
 
 
 ### F.1 Types of Openings
+- **Doors, windows, HVAC penetrations**: common opening types
+- **Window categories (3 types)**: supporting frame / bonded frame / ribbon-click-click
 - Small: width < panel width, within single panel
 - Large: width ≥ panel width, spanning joints
 - Service penetrations (ducts, pipes, cables)
-- Windows and doors
 
 ### F.2 Design Principles
 - Local load redistribution
@@ -349,7 +360,11 @@
 ### I.X Ageing, service-life, and repair
 - Ageing effects: strength/modulus reduction (climate chamber models)
 - Service-life prediction: resistance vs actions over time
-- In-situ repair + retrofitting: repair blistering/wrinkling; “new-to-old” cladding concepts
+- **Moisture ingress pathways**: joints, openings, fasteners, face damage
+- **Corrosion / coating degradation**: cut-edge, UV, chemical exposure
+- **Inspection checklist (on-site)**: visual, load-bearing, cladding retrofit
+- **Retrofitting decision tree**: new-to-old concept, repair vs replace criteria
+- In-situ repair + retrofitting: repair blistering/wrinkling; "new-to-old" cladding concepts
 - Sources: *D4.2-2_Modelforeffectofageing.pdf*; *EASIE PUBLISHABLE SUMMARY REPORT.pdf*; *D4.6-1_Claddingofsandwichpanels.pdf*; *Durability of sandwich panels - EPAQ.pdf*
 
 
@@ -479,7 +494,7 @@
 
 ### L.X SandEXCEL & workflow notes
 - SandEXCEL (Excel-based) used to compute internal actions, moments, stresses, rigidities
-- Supports 1–2 spans; flat/profiled faces; produces allowable load/span tables
+- Supports 1-2 spans; flat/profiled faces; produces allowable load/span tables
 - Source: *EASIE PUBLISHABLE SUMMARY REPORT.pdf*
 
 
