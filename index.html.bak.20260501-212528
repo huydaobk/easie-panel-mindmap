@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASIE - Sandwich Panel Knowledge Mindmap</title>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; overflow: hidden; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        #mindmap-container { width: 100vw; height: 100vh; }
+        .markmap { width: 100%; height: 100%; background: #fff; }
+        .markmap svg { width: 100% !important; height: 100% !important; }
+    </style>
+</head>
+<body>
+    <div id="mindmap-container">
+        <div class="markmap"># EASIE SANDWICH PANEL SYSTEM
+
+## A. Fundamentals & System Overview
+
+### A.1 What is a Sandwich Panel?
+- Composite: 2 thin faces + 1 thick core
+- I-beam analogy: faces resist tension/compression, core resists shear
+- Up to 90% weight savings vs conventional steel
+
+### A.2 Panel Types by Application
+- Wall panels (vertical load-bearing)
+- Roof panels (spanning, weatherproof)
+- Cladding panels (non-structural envelope)
+- Partitions / ceilings (interior)
+- Structural / frameless panels (load-bearing shell)
+
+### A.3 Functional Layers
+- Face sheets (steel, aluminum, FRP)
+- Core (PUR, PIR, mineral wool, EPS)
+- Adhesive/bond layer
+- Joints & interfaces
+
+### A.4 Performance Categories
+- Mechanical (strength, stiffness)
+- Thermal (insulation, U-value)
+- Airtightness / Watertightness
+- Fire (reaction & resistance)
+- Acoustic
+- Durability
+
+## B. Materials & Component Properties
+
+### B.1 Face Materials
+- Steel facings (280-320 MPa yield)
+- Coatings: galvanized, Aluzinc, HPS200, color-coated
+- Surface geometry: flat, ribbed, profiled, micro-rib
+
+### B.2 Core Materials
+- **PUR/PIR Foam**: density 34-42 kg/m³, shear 0.04-0.14 MPa
+- **Mineral Wool (MW)**: density 100-125 kg/m³, shear 0.08 MPa, fire-resistant
+- **EPS**: economical, moisture-sensitive
+- **PVC/IPN (Divinycell H)**: high performance/weight ratio
+- **PET (Divinycell P)**: excellent thermal stability
+- **PES (Divinycell F)**: highest service temperature, fire/smoke performance
+
+### B.3 Material Properties
+- Shear modulus & shear strength
+- Tensile/compressive strength
+- Wrinkling-related parameters
+- Creep & long-term behaviour
+- Thermal conductivity (lambda)
+
+### B.4 Bond & Interface Behaviour
+- Adhesive types and curing
+- Bond quality indicators
+- Debonding failure modes
+
+## C. Standards, Design Basis & Validation
+
+### C.1 EN 14509:2013 Framework
+- Factory-made self-supporting panels
+- CE Marking requirements
+- Factory Production Control (FPC)
+
+### C.2 European Recommendations
+- ECCS-CIB Joint Committee guidance
+- Design-by-Calculation (DBC)
+- Design-by-Testing (DBT)
+
+### C.3 Safety Philosophy
+- Partial factors (gamma_M, gamma_G, gamma_Q)
+- Reliability levels
+- Reference period
+
+### C.4 Validation Routes
+- **DBC**: analytical calculation with declared properties
+- **DBT**: testing with statistical evaluation (k=0.85 for 1 test, 0.90 for 2 tests)
+- Parametric study: DBT vs DBC comparison
+
+### C.5 Supporting Standards
+- EN 10143 (tolerances)
+- EN 10346 (coated steel)
+- EN 13162 (mineral wool)
+
+## D. Structural Behaviour & Failure Mechanisms
+
+### D.1 Load Introduction & Load Paths
+- Point loads vs distributed loads
+- Support conditions: simple, continuous, cantilever
+- Load transfer through joints
+
+### D.2 Global Panel Behaviour
+- Bending: face stresses, core shear
+- Shear deformation contribution
+- Composite action effectiveness
+- Deflection: bending + shear components
+
+### D.3 Stability & Second-Order Effects
+- Global buckling
+- Local instability
+- P-Delta effects in frameless systems
+
+### D.4 Connection Stiffness Influence
+- Joint stiffness on global behaviour
+- Semi-rigid modelling
+- Force distribution
+
+### D.5 Failure Modes
+- **Face yielding**: plastic collapse
+- **Wrinkling**: local buckling of compressed face
+- **Core shear failure**: shear cracking/yielding
+- **Tensile failure in core**: rare but critical
+- **Debonding/delamination**: adhesive failure
+- **Fastener/joint failures**: pull-through, shear
+- **Local crushing**: support effects, point loads
+
+### D.6 Limit States
+- **ULS**: Ultimate (strength, stability)
+- **SLS**: Serviceability (deflection L/200, vibration)
+- **FLS**: Fatigue (if applicable)
+
+## E. Joints, Fasteners & Interface Detailing
+
+### E.1 Joint Types
+- Longitudinal joints (side laps)
+- End joints (transverse)
+- Corner joints
+- Support connections
+
+### E.2 Fastener Design
+- Screw types and embedment
+- Pull-out resistance
+- Shear resistance
+- Thermal expansion accommodation
+
+### E.3 Interface Performance
+- Thermal bridging minimization
+- Air leakage control
+- Water penetration resistance
+- Vapor diffusion
+
+### E.4 Joint Stiffness & Load Transfer
+- Stiff vs flexible joints
+- Load redistribution
+- Compatibility of deformations
+
+### E.5 Detailing Rules
+- Minimum edge distances
+- Fastener spacing
+- Sealant requirements
+- Flashing details
+
+## F. Openings, Penetrations & Discontinuities
+
+### F.1 Types of Openings
+- Small: width < panel width, within single panel
+- Large: width ≥ panel width, spanning joints
+- Service penetrations (ducts, pipes, cables)
+- Windows and doors
+
+### F.2 Design Principles
+- Local load redistribution
+- Force paths around openings
+- Reinforcement concepts
+
+### F.3 Unreinforced Small Openings
+- Reduction factors: kF (wrinkling), kC (shear)
+- Beta = b/B ratio
+- Limitations and applicability
+
+### F.4 Reinforced Openings
+- Adapter profiles (load-bearing)
+- Punctual fixings (load distribution)
+- Bonded frames (stabilization only, ≥5cm zone)
+- Framed openings with structural steel
+
+### F.5 Special Cases
+- Profiled panels: flat zone vs rib zone reduction
+- Clustered openings
+- Edge and corner effects
+
+### F.6 Verification
+- Wrinkling check
+- Shear check
+- Joint capacity check
+
+## G. Application-Specific Design
+
+### G.1 Wall Systems
+- Vertical spanning, lateral wind
+- Self-weight + imposed loads
+- Connection to foundations and roofs
+- Movement joints
+
+### G.2 Roof Systems
+- Spanning between purlins/rafters
+- Snow loads, wind uplift (suction)
+- Drainage and slope
+- Thermal expansion
+
+### G.3 Cladding Systems
+- Non-structural envelope
+- Wind pressure/suction
+- Rainscreen principles
+- Support framing
+
+### G.4 Partitions & Ceilings
+- Acoustic requirements
+- Fire compartments
+- Services integration
+
+### G.5 Special Geometries
+- Curved panels
+- Tapered panels
+- Corner solutions
+
+### G.6 Application-Dependent Actions
+- Wind suction/pressure (zone-dependent)
+- Snow loads (shape coefficients)
+- Temperature effects (expansion/contraction)
+- Installation loads (handling, stacking)
+
+## H. Frameless / Structural Shell Buildings
+
+### H.1 Frameless Concept
+- Panel as primary structural element
+- Self-supporting box system
+- No traditional frame (columns, beams)
+
+### H.2 Load-Bearing Behaviour
+- Vertical: roof → walls → foundation
+- Horizontal: wind → diaphragm action → shear walls
+- In-plane shear resistance
+- Out-of-plane bending resistance
+
+### H.3 Stabilization
+- Panel-to-panel connections for diaphragm action
+- Transfer of horizontal loads
+- Torsional resistance
+- Bracing strategies
+
+### H.4 Wall Design (Frameless)
+- Axial + bending interaction
+- Buckling check (global, local)
+- Connection to foundation
+
+### H.5 Roof Design (Frameless)
+- Two-way vs one-way spanning
+- Edge beams / eaves beams
+- Ridge details
+- Valley solutions
+
+### H.6 Analytical Calculation
+- Equivalent frame methods
+- Plate theory simplifications
+- Spring models for joints
+
+### H.7 Numerical Calculation
+- FE modelling strategies
+- Shell elements vs solid elements
+- Joint modelling (springs, rigid links)
+- Validation against tests
+
+### H.8 Connection Stiffness in Frameless Systems
+- Critical parameter for global behaviour
+- Test methods for stiffness determination
+- Modelling approaches
+
+### H.9 Worked Examples
+- Single-storey industrial building
+- Multi-storey panel structure
+- Cold store / controlled environment
+
+## I. Durability, Ageing & Long-Term Performance
+
+### I.1 Environmental Exposure
+- Climate zones
+- UV radiation
+- Temperature cycles
+- Humidity variations
+
+### I.2 Moisture Effects
+- Core moisture uptake (especially MW)
+- Face corrosion
+- Freeze-thaw damage
+
+### I.3 Corrosion & Coating Durability
+- Galvanic protection
+- Coating degradation
+- Cut-edge corrosion
+- Design life vs service life
+
+### I.4 Ageing of Core Properties
+- PUR/PIR: initial reduction then stabilization
+- MW: moisture-dependent degradation
+- Long-term shear strength reduction
+
+### I.5 Creep & Long-Term Deformation
+- Creep coefficients
+- Deflection increase over time
+- Recovery vs permanent deformation
+
+### I.6 Property Reduction Over Time
+- Ageing factors for design
+- Test evidence (30-year panels)
+- Extrapolation methods
+
+### I.7 Durability Check Methods
+- Accelerated ageing tests
+- DUR1 (75°C, dry) & DUR2 (65°C, humid)
+- Property retention criteria
+
+### I.8 Implications for Design Values
+- Long-term design values vs short-term test values
+- Safety margins for ageing
+
+## J. Fire, Safety & Robustness
+
+### J.1 Fire Behaviour of Core Materials
+- **PUR/PIR**: combustible, smoke production
+- **MW**: non-combustible, excellent fire performance
+- **PES**: superior fire/smoke performance
+
+### J.2 Reaction to Fire
+- Euroclass ratings (A1, A2, B, C, D, E, F)
+- Smoke production (s1, s2, s3)
+- Burning droplets (d0, d1, d2)
+
+### J.3 Fire Resistance
+- Load-bearing capacity (R)
+- Integrity (E)
+- Insulation (I)
+- REI ratings (15, 30, 60, 90, 120 minutes)
+
+### J.4 Joint Detailing Under Fire
+- Fire stops in joints
+- Penetration seals
+- Continuity of fire protection
+
+### J.5 Fire Spread Concerns
+- External fire spread (façade systems)
+- Cavity barriers
+- Fire breaks at floor lines
+
+### J.6 Relation to Openings & Interfaces
+- Fire-rated doors/windows
+- Service penetration fire stopping
+- Compartmentation integrity
+
+### J.7 Robustness & Accidental Scenarios
+- Progressive collapse resistance
+- Key element design
+- Alternative load paths
+
+## K. Manufacturing, Handling, Installation & QA/QC
+
+### K.1 Manufacturing Processes
+- Continuous lamination (PU/PIR)
+- Mineral wool panel production
+- Quality control points
+- Automation vs manual operations
+
+### K.2 Tolerances & Consistency
+- Dimensional tolerances (EN 14509)
+- Thickness variations
+- Squareness and straightness
+
+### K.3 Factory Production Control (FPC)
+- Raw material control
+- In-process testing
+- Final inspection
+- Traceability
+
+### K.4 Transport & Storage
+- Stacking limits
+- Protection from damage
+- Moisture protection (especially MW)
+- Handling equipment
+
+### K.5 Installation Sequencing
+- Panel laying direction
+- Joint assembly order
+- Temporary support
+- Weather protection during construction
+
+### K.6 Site QA / Inspection
+- Visual inspection checklist
+- Dimensional verification
+- Joint quality check
+- Fastener verification
+
+### K.7 Handling Defects
+- Damage assessment
+- Repair methods
+- Replacement criteria
+- Design implications of defects
+
+## L. Worked Examples, Design Aids & Workflow
+
+### L.1 Worked Examples by Application
+- **Wall examples**: wind pressure, self-weight
+- **Roof examples**: snow load, uplift, deflection
+- **Cladding examples**: wind suction, thermal
+- **Frameless examples**: structural shell design
+- **Opening/detail examples**: reinforced cut-outs
+
+### L.2 Key Formulas (Integrated)
+- Bending resistance: M_Rd = f_yf * Z / gamma_M
+- Shear resistance: V_Rd = f_cv * A_c / gamma_M
+- Deflection: delta = delta_bending + delta_shear
+- Wrinkling stress: sigma_w = k_w * E_c^(1/3) * E_f^(2/3) * (t_f / b_c)
+
+### L.3 Design Workflow
+1. Define application and design actions
+2. Choose panel system and materials
+3. Select validation route (DBC or DBT)
+4. Check structural behaviour (bending, shear, stability)
+5. Detail joints and resolve openings
+6. Verify durability, fire, serviceability
+7. Final detailing and QA checklist
+
+### L.4 Design Checklist
+- [ ] Actions defined (permanent, variable, wind, snow, thermal)
+- [ ] Panel type and core material selected
+- [ ] Validation route confirmed (DBC/DBT)
+- [ ] ULS checks: bending, shear, compression, wrinkling
+- [ ] SLS checks: deflection, vibration
+- [ ] Joint capacity verified
+- [ ] Openings detailed and checked
+- [ ] Fire requirements met
+- [ ] Durability considered (ageing, environment)
+- [ ] Manufacturing quality assured
+- [ ] Installation requirements specified
+
+## M. Reference Library / Evidence Map
+
+### M.1 Standards & Codes
+- BS EN 14509:2013
+- EN 10143, EN 10346
+- EN 13162 (MW)
+- National annexes
+
+### M.2 EASIE Deliverables
+- **D1.2**: Openings in Sandwich Panels
+- **D2.1**: Thermal Test Method
+- **D2.2**: Parametric Study DBT vs DBC
+- **D2.3**: Panel with Two Flat Facings / One Face Ribbed
+- **D3.2**: Design Methods (Parts 1-5)
+- **D3.3**: Joints & Fasteners (Parts 1-6)
+- **D3.4**: Frameless Buildings
+- **D3.5**: Design of Frameless Structures
+- **D4.2**: Ageing Models
+- **D4.3**: Improved Design Expressions
+- **D4.6**: Cladding of Sandwich Panels
+- **D5.1**: Guidelines and Examples of Good Practice
+
+### M.3 EPAQ & Industry Guidance
+- European Recommendations for Sandwich Panels
+- CIB15696, CIB1782, CIB18785
+- ECCS-CIB Joint Committee documents
+
+### M.4 Examples & Case Documents
+- Ecamplen5PUcladdingpanel130mm
+- EASIE research results
+- Durability of sandwich panels (EPAQ)
+
+### M.5 Research & Theses
+- EASIE publishable summary
+- EASIE final report (Part 2)
+- Related PhD theses and papers
+
+---
+
+*Mindmap structure based on EASIE FP7 Project deliverables and European Recommendations for Sandwich Panels*
+*Last updated: April 2026*</div>
+    </div>
+</body>
+</html>
