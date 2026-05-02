@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EASIE - Sandwich Panel Knowledge Mindmap</title>
+    <title>EASIE Sandwich Panel Knowledge System | Hệ Thống Tri Thức Panel Sandwich</title>
     <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -12,14 +12,119 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
-        #mindmap-container { width: 100vw; height: 100vh; }
+
+        /* Language Toggle Button */
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .lang-btn .flag {
+            font-size: 16px;
+        }
+
+        .lang-btn:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .lang-btn.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content Containers */
+        .content-wrapper {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .lang-content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .lang-content.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #mindmap-container { width: 100%; height: 100%; }
         .markmap { width: 100%; height: 100%; background: #fff; }
         .markmap svg { width: 100% !important; height: 100% !important; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .lang-toggle {
+                top: 10px;
+                right: 10px;
+            }
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            .lang-btn .flag {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div id="mindmap-container">
-        <div class="markmap"># EASIE SANDWICH PANEL SYSTEM
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">
+            <span class="flag">🇬🇧</span>
+            <span>EN</span>
+        </button>
+        <button class="lang-btn" onclick="switchLanguage('vi')" data-lang="vi">
+            <span class="flag">🇻🇳</span>
+            <span>VI</span>
+        </button>
+    </div>
+
+    <div class="content-wrapper">
+        <!-- English Content -->
+        <div id="content-en" class="lang-content active">
+            <div id="mindmap-container-en">
+                <div class="markmap"># EASIE SANDWICH PANEL SYSTEM
 
 ## A. Fundamentals & System Overview
 
@@ -630,6 +735,691 @@
 
 *Mindmap structure based on EASIE FP7 Project deliverables and European Recommendations for Sandwich Panels*
 *Last updated: May 2026 - Phase 5 Complete*</div>
+            </div>
+        </div>
+
+        <!-- Vietnamese Content -->
+        <div id="content-vi" class="lang-content">
+            <div id="mindmap-container-vi">
+                <div class="markmap"># HỆ THỐNG PANEL SANDWICH EASIE
+
+## A. Cơ Bản & Tổng Quan Hệ Thống
+
+### A.1 Panel Sandwich là gì?
+- Vật liệu composite: 2 lớp mặt mỏng + 1 lõi dày
+- Tương tự dầm chữ I: mặt chịu kéo/nén, lõi chịu cắt
+- Tiết kiệm trọng lượng đến 90% so với thép thông thường
+
+### A.2 Các Loại Panel Theo Ứng Dụng
+- Panel tường (chịu tải thẳng đứng)
+- Panel mái (vượt nhịp, chống thấm)
+- Panel ốp tường (vỏ bọc không chịu lực)
+- Panel ngăn / trần (nội thất)
+- Panel kết cấu / không khung (vỏ chịu lực)
+
+### A.3 Các Lớp Chức Năng
+- Tấm mặt (thép, nhôm, FRP)
+- Lõi (PUR, PIR, bông khoáng, EPS)
+- Lớp keo/liên kết
+- Mối nối & các giao diện
+
+### A.4 Các Hạng Mục Hiệu Năng
+- Cơ học (độ bền, độ cứng)
+- Nhiệt (cách nhiệt, hệ số U)
+- Kín khí / Chống thấm nước
+- Cháy (phản ứng & chống cháy)
+- Âm học
+- Độ bền
+
+## B. Vật Liệu & Tính Chất Thành Phần
+
+### B.1 Vật Liệu Mặt
+- Mặt thép (giới hạn chảy 280-320 MPa)
+- Lớp phủ: mạ kẽm, Aluzinc, HPS200, phủ màu
+- Hình học bề mặt: phẳng, gân, gân lớn, gân nhỏ
+
+### B.2 Vật Liệu Lõi
+- **Xốp PUR/PIR**: khối lượng 34-42 kg/m3, cắt 0.04-0.14 MPa
+- **Bông Khoáng (MW)**: khối lượng 100-125 kg/m3, cắt 0.08 MPa, chống cháy
+- **EPS**: kinh tế, nhạy cảm với ẩm
+- **PVC/IPN (Divinycell H)**: hiệu suất/trọng lượng cao
+- **PET (Divinycell P)**: ổn định nhiệt xuất sắc
+- **PES (Divinycell F)**: nhiệt độ sử dụng cao nhất, chống cháy/khói
+
+### B.3 Tính Chất Vật Liệu
+- Môđun cắt & độ bền cắt
+- Độ bền kéo/nén
+- Thông số liên quan hiện tượng nhăn
+- Biến dạng dài hạn & tính chất theo thời gian
+- Độ dẫn nhiệt (lambda)
+
+### B.4 Keo & Hành Vi Giao Diện
+- Loại keo và quá trình đóng rắn
+- Chỉ số chất lượng liên kết
+- Các kiểu hỏng bong tróc
+
+## C. Tiêu Chuẩn, Cơ Sở Thiết Kế & Xác Minh
+
+### C.X DBT vs DBC (Thiết Kế Theo Thử Nghiệm vs Thiết Kế Theo Tính Toán)
+- **DBC**: tuyến phân tích dựa trên tiêu chuẩn (EN 14509 + ECCS-CIB)
+- **DBT**: tuyến thử nghiệm để xác định sức kháng thiết kế; bổ sung cho DBC
+- Cần **ma trận thử nghiệm** để đại diện dòng sản phẩm (độ dày/profil/lõi/bu lông)
+- EASIE báo cáo **tương quan tốt** và mức an toàn tương đương
+- Nguồn: *Design-by-Testing---Calculation-of-Sandwich-Panels.pdf*; *EASIE PUBLISHABLE SUMMARY REPORT.pdf*; *European Recommendations for Sandwich Panels Part 1 Design. ECCSCIB Report - CIB Publication.pdf*
+
+
+### C.1 Khung Pháp Lý EN 14509:2013
+- Panel tự chịu lực sản xuất tại nhà máy
+- Yêu cầu CE Marking
+- Kiểm soát Sản xuất Tại Nhà Máy (FPC)
+
+### C.2 Khuyến Nghị Châu Âu
+- Hướng dẫn Ủy ban Chung ECCS-CIB
+- Thiết Kế Theo Tính Toán (DBC)
+- Thiết Kế Theo Thử Nghiệm (DBT)
+
+### C.3 Triết Lý An Toàn
+- Hệ số một phần (gamma_M, gamma_G, gamma_Q)
+- Các mức độ tin cậy
+- Chu kỳ tham chiếu
+
+### C.4 Các Tuyến Xác Minh
+- **DBC**: tính toán phân tích với thuộc tính đã công bố
+- **DBT**: thử nghiệm với đánh giá thống kê (k=0.85 cho 1 thử nghiệm, 0.90 cho 2 thử nghiệm)
+- Nghiên cứu tham số: so sánh DBT vs DBC
+
+### C.5 Các Tiêu Chuẩn Hỗ Trợ
+- EN 10143 (dung sai)
+- EN 10346 (thép phủ)
+- EN 13162 (bông khoáng)
+
+## D. Hành Vi Kết Cấu & Cơ Chế Hỏng
+
+### D.X Hỏng cục bộ và cơ học độ cứng
+- **Hiện tượng nhăn (Wrinkling)**: mất ổn định cục bộ mặt chịu nén
+- **Crippling**: mất ổn định cục bộ gần vùng truyền tải
+- **Độ bền cắt lõi**: ngưỡng hỏng cắt do lõi
+- **Môđun cắt lõi**: chi phối phần biến dạng cắt
+- **Hệ số creep**: bộ khuếch đại biến dạng dài hạn
+
+
+### D.1 Truyền Tải & Đường Truyền Lực
+- Tải tập trung vs tải phân bố
+- Điều kiện tựa: đơn giản, liên tục, console
+- Truyền tải qua mối nối
+
+### D.2 Hành Vi Toàn Panel
+- Uốn: ứng suất mặt, cắt lõi
+- Phần đóng góp biến dạng cắt
+- Hiệu quả tác dụng composite
+- Độ võng: thành phần uốn + cắt
+
+### D.3 Ổn Định & Hiệu Ứng Bậc Hai
+- Uốn ngang toàn cục
+- Mất ổn định cục bộ
+- Hiệu ứng P-Delta trong hệ không khung
+
+### D.4 Ảnh Hưởng Độ Cứng Liên Kết
+- Độ cứng mối nối lên hành vi toàn cục
+- Mô hình bán cứng
+- Phân phối lực
+
+### D.5 Các Kiểu Hỏng
+- **Chảy mặt**: sụp đổ dẻo
+- **Nhăn mặt**: uốn ngang cục bộ mặt chịu nén
+- **Uốn ngang cắt**: mất ổn định lõi/mặt dưới cắt
+- **Uốn ngang toàn cục**: mất ổn định tổng thể dưới nén
+- **Tương tác uốn cục bộ/toàn cục**: panel gân có thể hỏng toàn cục
+- **Hỏng cắt lõi**: nứt/chảy do cắt
+- **Hỏng kéo lõi**: hiếm nhưng nghiêm trọng
+- **Bong tróc/delamination**: hỏng keo (tách mặt-lõi)
+- **Hỏng bu lông/mối nối**: kéo rút, kéo xuyên, cắt
+- **Chảy mặt cục bộ**: tải tập trung / áp lực bu lông
+- **Ép nát cục bộ**: hiệu ứng tựa, tải tập trung
+
+### D.6 Các Trạng Thái Giới Hạn
+- **ULS**: Tới Hạn (bền, ổn định)
+- **SLS**: Sử Dụng (độ võng L/200, rung động)
+- **FLS**: Mỏi (nếu áp dụng)
+
+## E. Mối Nối, Bu Lông & Chi Tiết Giao Diện
+
+### E.Y Truyền cắt và độ cứng mối nối
+- Liên kết cơ học trong cắt mặt phẳng
+- Độ cứng và ảnh hưởng sức chứa mối nối dọc
+
+
+### E.X Các yếu tố chính ảnh hưởng mối nối (tại sao mối nối rò rỉ)
+- Hình học mối nối
+- Chất lượng băng dính kín
+- Dung sai lắp đặt
+- Nguồn: *EASIE PUBLISHABLE SUMMARY REPORT.pdf*; *European Recommendations for the Design, Detailing and Application of Fastening for Sandwich Panels.pdf*; *ECCSCIB_Joint_Committee_on_Sandwich_Constructions_.pdf*
+
+
+### E.1 Các Loại Mối Nối
+- Mối nối dọc (side laps)
+- Mối nối đầu (ngang)
+- Mối nối góc
+- Liên kết tựa
+
+### E.2 Thiết Kế Bu Lông
+- Loại vít và độ sâu cắm
+- **Sức kháng kéo rút**: NRk,II từ cấu kiện phụ (EN 1993-1-3, EN 1995-1-1)
+- **Sức kháng kéo xuyên**: NRk,I xuyên mặt ngoài
+- **Chảy mặt cục bộ**: dưới đầu bu lông
+- Sức kháng cắt
+- Bù trừ giãn nở nhiệt
+
+### E.3 Hiệu Năng Giao Diện
+- Giảm thiểu cầu nhiệt
+- Kiểm soát rò rỉ khí
+- Chống thấm nước
+- Khuếch tán hơi ẩm
+
+### E.4 Độ Cứng Mối Nối & Truyền Tải
+- Mối nối cứng vs mềm
+- Phân phối lại tải
+- Tương thích biến dạng
+
+### E.5 Quy Tắc Chi Tiết
+- Khoảng cách mép tối thiểu
+- Bước bu lông
+- Yêu cầu chất kín
+- Chi tiết máng xối
+
+## F. Cửa Sổ, Khoan Cắt & Điểm Gián Đoạn
+
+### F.Y Hiệu ứng nhiệt và chi tiết cục bộ
+- **Chiến lược máng xối**: kín giao diện panel-cửa
+- **Cầu nhiệt tại máng**: đỉnh dẫn nhiệt tại mép
+- **Phân phối lại tải quanh cửa**: qua mối nối dọc
+- **Lắp nhanh click-click**: hệ thống tích hợp (ví dụ: FECH Jet)
+- Cầu nhiệt tại máng
+- Tăng cường quanh cửa
+
+
+### F.X Cửa sổ - nhỏ/lớn + tăng cường
+- Cửa nhỏ: mô hình bền
+- Cửa lớn: hướng dẫn thiết kế
+- Tăng cường: thanh chuyển / bu lông điểm / khung dán
+- Nguồn: *EASIE PUBLISHABLE SUMMARY REPORT.pdf*
+
+
+### F.1 Các Loại Cửa
+- **Cửa, cửa sổ, khoan HVAC**: các loại cửa thông dụng
+- **Phân loại cửa sổ (3 loại)**: khung tựa / khung dán / dải click-click
+- Nhỏ: rộng < rộng panel, trong một panel
+- Lớn: rộng ≥ rộng panel, vượt mối nối
+- Khoan dịch vụ (ống dẫn, cáp)
+
+### F.2 Nguyên Tắc Thiết Kế
+- Phân phối lại tải cục bộ
+- Đường truyền lực quanh cửa
+- Khái niệm tăng cường
+
+### F.3 Cửa Nhỏ Không Tăng Cường
+- Hệ số giảm: kF (nhăn), kC (cắt)
+- Tỷ số Beta = b/B
+- Giới hạn và phạm vi áp dụng
+
+### F.4 Cửa Có Tăng Cường
+- Thanh chuyển (chịu tải)
+- Bu lông điểm (phân phối tải)
+- Khung dán (chỉ ổn định, vùng ≥5cm)
+- Cửa có khung thép kết cấu
+
+### F.5 Các Trường Hợp Đặc Biệt
+- Panel gân: vùng phẳng vs vùng gân giảm
+- Cửa nhóm
+- Hiệu ứng mép và góc
+
+### F.6 Xác Minh
+- Kiểm tra nhăn
+- Kiểm tra cắt
+- Kiểm tra sức mối nối
+
+## G. Thiết Kế Theo Ứng Dụng Cụ Thể
+
+### G.1 Hệ Thống Tường
+- Vượt nhịp thẳng đứng, gió ngang
+- Trọng lượng bản thân + tải đặt
+- Liên kết móng và mái
+- Khe co giãn
+
+### G.2 Hệ Thống Mái
+- Vượt nhịp giữa purlin/xà
+- Tải tuyết, gió hút (áp suất âm)
+- Thoát nước và độ dốc
+- Giãn nở nhiệt
+
+### G.3 Hệ Thống Ốp Tường
+- Vỏ bọc không chịu lực
+- Áp/lực hút gió
+- Nguyên lý rainscreen
+- Khung đỡ
+
+### G.4 Vách Ngăn & Trần
+- Yêu cầu âm học
+- Ngăn cháy
+- Tích hợp dịch vụ
+
+### G.5 Hình Học Đặc Biệt
+- Panel cong
+- Panel thuôn
+- Giải pháp góc
+
+### G.6 Tác Động Phụ Thuộc Ứng Dụng
+- Hút/áp gió (phụ thuộc vùng)
+- Tải tuyết (hệ số hình dạng)
+- Hiệu ứng nhiệt (giãn nở/co)
+- Tải lắp đặt (vận chuyển, xếp)
+
+## H. Công Trình Không Khung / Vỏ Kết Cấu
+
+### H.X Các khái niệm sức kháng toàn cục dùng trong thiết kế không khung
+- **Tác dụng màng** (giằng cắt mặt phẳng)
+- **Ràng buộc xoắn** dầm/purlin qua độ cứng lò xo xoắn (**c9**)
+- Giám sát mẫu thử: biến dạng tải trục nhỏ; hiệu ứng nhiệt đáng kể
+- Nguồn: *EASIE PUBLISHABLE SUMMARY REPORT.pdf*; *D3.4-Frameless buildings made of sandwich panels.pdf*; *D3.5-Design of fraeless structure made of sandwich panel.pdf*
+
+
+### H.1 Khái Niệm Không Khung
+- Panel là cấu kiện kết cấu chính
+- Hệ hộp tự chịu lực
+- Không có khung truyền thống (cột, dầm)
+
+### H.2 Hành Vi Chịu Tải
+- Thẳng đứng: mái → tường → móng
+- Ngang: gió → tác dụng màng → tường chịu cắt
+- Sức kháng cắt mặt phẳng
+- Sức kháng uốn ngoài mặt phẳng
+
+### H.3 Ổn Định
+- Liên kết panel-panel cho tác dụng màng
+- Truyền tải ngang
+- Sức kháng xoắn
+- Chiến lược giằng
+
+### H.4 Thiết Kế Tường (Không Khung)
+- Tương tác trục + uốn
+- Kiểm tra uốn ngang (toàn cục, cục bộ)
+- Liên kết móng
+
+### H.5 Thiết Kế Mái (Không Khung)
+- Vượt nhịp hai chiều vs một chiều
+- Dầm biên / dầm mái hiên
+- Chi tiết nóc
+- Giải pháp thung lũng
+
+### H.6 Tính Toán Phân Tích
+- Phương pháp khung tương đương
+- Đơn giản hóa lý thuyết tấm
+- Mô hình lò xo cho mối nối
+
+### H.7 Tính Toán Số
+- Chiến lược mô hình FE
+- Phần tử vỏ vs phần tử khối
+- Mô hình mối nối (lò xo, liên kết cứng)
+- Xác nhận với thử nghiệm
+
+### H.8 Độ Cứng Liên Kết Trong Hệ Không Khung
+- Thông số quan trọng cho hành vi toàn cục
+- Phương pháp thử xác định độ cứng
+- Cách tiếp cận mô hình
+
+### H.9 Ví Dụ Thực Hành
+- Công trình công nghiệp một tầng
+- Công trình panel nhiều tầng
+- Kho lạnh / môi trường kiểm soát
+
+## I. Độ Bền, Lão Hóa & Hiệu Năng Dài Hạn
+
+### I.Y Khả năng sửa chữa lỗi cục bộ
+- Sửa bong bóng và nhăn tại chỗ
+- Logic bảo trì thực tiễn để kéo dài tuổi thọ
+
+
+### I.X Lão hóa, tuổi thọ và sửa chữa
+- Hiệu ứng lão hóa: giảm bền/môđun (mô hình buồng khí hậu)
+- Dự đoán tuổi thọ: sức kháng vs tác động theo thời gian
+- **Đường thấm ẩm**: mối nối, cửa, bu lông, hỏng mặt
+- **Ăn mòn / xuống cấp lớp phủ**: mép cắt, UV, hóa chất
+- **Checklist kiểm tra (tại công trường)**: thị giác, chịu tải, cải tạo ốp
+- **Cây quyết định cải tạo**: khái niệm mới-cũ, tiêu chí sửa vs thay
+- Sửa tại chỗ + cải tạo: sửa bong bóng/nhăn; khái niệm ốp "mới-cũ"
+- Nguồn: *D4.2-2_Modelforeffectofageing.pdf*; *EASIE PUBLISHABLE SUMMARY REPORT.pdf*; *D4.6-1_Claddingofsandwichpanels.pdf*; *Durability of sandwich panels - EPAQ.pdf*
+
+
+### I.1 Phơi Nhiễm Môi Trường
+- Vùng khí hậu
+- Bức xạ UV
+- Chu kỳ nhiệt độ
+- Biến động độ ẩm
+
+### I.2 Ảnh Hưởng Ẩm
+- Hấp thụ ẩm lõi (đặc biệt MW)
+- Ăn mòn mặt
+- Hỏng đông lạnh
+
+### I.3 Ăn Mòn & Độ Bền Lớp Phủ
+- Bảo vệ điện giải
+- Xuống cấp lớp phủ
+- Ăn mòn mép cắt
+- Tuổi thọ thiết kế vs tuổi thọ sử dụng
+
+### I.4 Lão Hóa Tính Chất Lõi
+- PUR/PIR: giảm ban đầu rồi ổn định
+- MW: xuống cấp phụ thuộc ẩm
+- Giảm độ bền cắt dài hạn
+
+### I.5 Biến Dạng Dài Hạn (Creep)
+- Hệ số creep
+- Tăng độ võng theo thời gian
+- Phục hồi vs biến dạng vĩnh viễn
+
+### I.6 Giảm Tính Chất Theo Thời Gian
+- Hệ số lão hóa cho thiết kế
+- Bằng chứng thử nghiệm (panel 30 năm)
+- Phương pháp ngoại suy
+
+### I.7 Phương Pháp Kiểm Tra Độ Bền
+- Thử nghiệm lão hóa gia tốc
+- DUR1 (75°C, khô) & DUR2 (65°C, ẩm)
+- Tiêu chí duy trì tính chất
+
+### I.8 Hàm Ý cho Giá Trị Thiết Kế
+- Giá trị thiết kế dài hạn vs giá trị thử nghiệm ngắn hạn
+- Hệ số an toàn cho lão hóa
+
+## J. Cháy, An Toàn & Độ Bền Vững
+
+### J.1 Hành Vi Cháy Của Vật Liệu Lõi
+- **PUR/PIR**: dễ cháy, sinh khói
+- **MW**: không cháy, hiệu năng cháy xuất sắc
+- **PES**: hiệu năng cháy/khói vượt trội
+
+### J.2 Phản Ứng Với Cháy
+- Xếp hạng Euroclass (A1, A2, B, C, D, E, F)
+- Sinh khói (s1, s2, s3)
+- Giọt cháy (d0, d1, d2)
+
+### J.3 Sức Chống Cháy
+- Khả năng chịu tải (R)
+- Toàn vẹn (E)
+- Cách nhiệt (I)
+- Xếp hạng REI (15, 30, 60, 90, 120 phút)
+
+### J.4 Chi Tiết Mối Nối Trong Cháy
+- Ngăn cháy trong mối nối
+- Kín khoan cắt
+- Liên tục bảo vệ cháy
+
+### J.5 Lo Ngại Lan Truyền Cháy
+- Lan truyền cháy ngoài (hệ mặt dựng)
+- Rào chắn khoang
+- Ngăn cháy tại tầng
+
+### J.6 Liên Quan Đến Cửa & Giao Diện
+- Cửa/cửa sổ chống cháy
+- Kín cháy khoan dịch vụ
+- Toàn vẹn ngăn cháy
+
+### J.7 Độ Bền Vững & Kịch Bản Tai Nạn
+- Kháng sụp đổ tiến triển
+- Thiết kế cấu kiện then chốt
+- Đường tải thay thế
+
+## K. Sản Xuất, Vận Chuyển, Lắp Đặt & QA/QC
+
+### K.1 Quy Trình Sản Xuất
+- Lamin liên tục (PU/PIR)
+- Sản xuất panel bông khoáng
+- Điểm kiểm soát chất lượng
+- Tự động vs thủ công
+
+### K.2 Dung Sai & Độ Đồng Nhất
+- Dung sai kích thước (EN 14509)
+- Biến động độ dày
+- Vuông góc và độ thẳng
+
+### K.3 Kiểm Soát Sản Xuất Tại Nhà Máy (FPC)
+- Kiểm soát nguyên liệu
+- Thử nghiệm trong quá trình
+- Kiểm tra cuối cùng
+- Truy xuất nguồn gốc
+
+### K.4 Vận Chuyển & Lưu Kho
+- Giới hạn xếp chồng
+- Bảo vệ khỏi hỏng
+- Bảo vệ ẩm (đặc biệt MW)
+- Thiết bị xử lý
+
+### K.5 Trình Tự Lắp Đặt
+- Hướng lát panel
+- Thứ tự lắp mối nối
+- Tựa tạm
+- Bảo vệ thời tiết trong thi công
+
+### K.6 QA / Kiểm Tra Công Trường
+- Checklist kiểm tra thị giác
+- Xác minh kích thước
+- Kiểm tra chất lượng mối nối
+- Xác minh bu lông
+
+### K.7 Xử Lý Lỗi
+- Đánh giá hỏng
+- Phương pháp sửa
+- Tiêu chí thay thế
+- Hàm ý thiết kế của lỗi
+
+## L. Ví Dụ Thực Hành, Công Cụ Thiết Kế & Quy Trình
+
+### L.X SandEXCEL & ghi chú quy trình
+- SandEXCEL (Excel) dùng tính nội lực, momen, ứng suất, độ cứng
+- Hỗ trợ 1-2 nhịp; mặt phẳng/gân; tạo bảng tải cho phép/nhịp
+- Nguồn: *EASIE PUBLISHABLE SUMMARY REPORT.pdf*
+
+
+### L.1 Ví Dụ Thực Hành Theo Ứng Dụng
+- **Ví dụ tường**: áp gió, trọng lượng bản thân
+- **Ví dụ mái**: tải tuyết, hút, độ võng
+- **Ví dụ ốp**: hút gió, nhiệt
+- **Ví dụ không khung**: thiết kế vỏ kết cấu
+- **Ví dụ cửa/chi tiết**: cửa có tăng cường
+
+### L.2 Công Thức Chính (Tích Hợp)
+- Sức kháng uốn: M_Rd = f_yf * Z / gamma_M
+- Sức kháng cắt: V_Rd = f_cv * A_c / gamma_M
+- Độ võng: delta = delta_uốn + delta_cắt
+- Ứng suất nhăn: sigma_w = k_w * E_c^(1/3) * E_f^(2/3) * (t_f / b_c)
+
+### L.3 Quy Trình Thiết Kế
+1. Xác định ứng dụng và tác động thiết kế
+2. Chọn hệ panel và vật liệu
+3. Chọn tuyến xác nhận (DBC hoặc DBT)
+4. Kiểm tra hành vi kết cấu (uốn, cắt, ổn định)
+5. Chi tiết mối nối và giải quyết cửa
+6. Xác minh độ bền, cháy, sử dụng
+7. Hoàn thiện chi tiết và checklist QA
+
+### L.4 Checklist Thiết Kế
+- [ ] Tác động đã xác định (tĩnh, động, gió, tuyết, nhiệt)
+- [ ] Loại panel và vật liệu lõi đã chọn
+- [ ] Tuyến xác nhận đã chốt (DBC/DBT)
+- [ ] Kiểm tra ULS: uốn, cắt, nén, nhăn
+- [ ] Kiểm tra SLS: độ võng, rung động
+- [ ] Sức mối nối đã xác minh
+- [ ] Cửa đã chi tiết và kiểm tra
+- [ ] Yêu cầu cháy đã đáp ứng
+- [ ] Độ bền đã xem xét (lão hóa, môi trường)
+- [ ] Chất lượng sản xuất đảm bảo
+- [ ] Yêu cầu lắp đặt đã xác định
+
+## M. Thư Viện Tham Khảo / Bản Đồ Bằng Chứng
+
+### M.1 Tiêu Chuẩn & Quy Phạm
+- BS EN 14509:2013
+- EN 10143, EN 10346
+- EN 13162 (bông khoáng)
+- Phụ lục quốc gia
+
+### M.2 Sản Phẩm EASIE
+- **D1.2**: Cửa Trong Panel Sandwich
+- **D2.1**: Phương Pháp Thử Nhiệt
+- **D2.2**: Nghiên Cứu Tham Số DBT vs DBC
+- **D2.3**: Panel Hai Mặt Phẳng / Một Mặt Gân
+- **D3.2**: Phương Pháp Thiết Kế (Phần 1-5)
+- **D3.3**: Mối Nối & Bu Lông (Phần 1-6)
+- **D3.4**: Công Trình Không Khung
+- **D3.5**: Thiết Kế Kết Cấu Không Khung
+- **D4.2**: Mô Hình Lão Hóa
+- **D4.3**: Biểu Thức Thiết Kế Cải Tiến
+- **D4.6**: Ốp Panel Sandwich
+- **D5.1**: Hướng Dẫn & Ví Dụ Thực Hành
+
+### M.3 EPAQ & Hướng Dẫn Ngành
+- Khuyến Nghị Châu Âu cho Panel Sandwich
+- CIB15696, CIB1782, CIB18785
+- Tài liệu Ủy Ban Chung ECCS-CIB
+
+### M.4 Ví Dụ & Tài Liệu Trường Hợp
+- Ecamplen5PUcladdingpanel130mm
+- Kết quả nghiên cứu EASIE
+- Độ bền panel sandwich (EPAQ)
+
+### M.5 Nghiên Cứu & Luận Án
+- Tóm tắt công bố EASIE
+- Báo cáo cuối EASIE (Phần 2)
+- Luận án tiến sĩ và bài báo liên quan
+
+## N. Giai Đoạn 4-5: Kiến Thức Kỹ Thuật Sâu (Công Thức, Chi Phí, Quy Trình)
+
+### N.1 Công Thức Nâng Cao
+- **Uốn kết hợp với creep**: `M^I = [M_W + M_ΔT + M_S(1+φ) + M_G(1+φ)] × α`
+- **Hệ số khuếch đại**: `α = 1 / (1 - N/N_cr)`
+- **Uốn ngang đàn hồi**: `N_cr = N_ki / (1 + N_ki/GA)`
+- **Độ cứng uốn panel**: `B_S = E_F · (A_F1·A_F2)/(A_F1+A_F2) · e²`
+- **Sức kháng liên kết trực tiếp**: `F_Rk = 4.2 · √(t_F² · d1) · f_u,F2`
+- **Ứng suất nhăn**: `σ_cr,w = 3/∛9 · ∛(2·E_I·G_C·E_C)`
+- **Hiệu chỉnh DBT**: `R_adj = R_obs · (f_y/f_y,obs)^α · (t/t_obs)^β`
+
+### N.2 Ví Dụ Tính Toán D3.5
+- Phân phối tải trục cho mặt
+- Ứng suất mặt (trục + uốn)
+- Tính toán ứng suất cắt lõi
+- Độ võng do nhiệt (hè/đông)
+- Độ lệch ban đầu e₀ (giới hạn 10mm)
+- Tải dây tương đương (trọng lượng bản thân, tuyết)
+- Hệ số khuếch đại bậc hai α
+- Tải uốn ngang Ncr với liên kết GA
+- Momen kết hợp với creep (so sánh PUR vs MW)
+- Véc tơ cắt liên kết + độ cứng trên đơn vị dài
+
+### N.3 Mô Hình Ước Tính Chi Phí
+- **Chi phí vật liệu**: `C_panel = C_core + C_faces + C_coating + C_profit`
+- **Chi phí lắp đặt**: `C_install = C_labor×Hours + C_equipment + C_scaffold`
+- **Tổng dự án**: `C_total = Area×[C_material+C_install]×Regional_factor + Fixed`
+- Ví dụ thực hành: kho lạnh 1.000 m²
+- So sánh chi phí PUR vs EPS vs Bông Khoáng
+- Chi phí vòng đời (bảo trì, ROI năng lượng)
+
+### N.4 Quy Trình Kiểm Tra
+- **Trước lắp đặt**: nhận vật liệu, duyệt bu lông, xác minh cấu kiện phụ, xem xét tài liệu thiết kế
+- **Trong lắp đặt**: QC góc/độ sâu/momen xoắn, nén kín, rào cản hơi kho lạnh
+- **Sau lắp đặt**: nghiệm thu thị giác, thử kín khí/chống thấm, tài liệu hoàn công
+- **Quy trình sửa chữa**: mài → lõm → vật liệu → hoàn thiện → xác minh
+- Checklist đặc biệt: kho lạnh, chống cháy, sau động đất
+
+### N.5 Cây Quyết Định
+- Chọn vật liệu lõi (tiêu chí PUR/EPS/MW)
+- Chọn vật liệu mặt (Thép/Al/GFRP)
+- Chọn độ dày (nhiệt vs kết cấu chi phối)
+- Phương pháp liên kết (trực tiếp/giấu/xoắn/không khung)
+- Tăng cường cửa (thanh chuyển/bu lông điểm/khung dán/khung)
+- Phương pháp thiết kế (tiêu chí chọn DBC vs DBT)
+- Quyết định cải tạo (tiêu chí sửa/ốp/thay)
+- Cây chọn sức chống cháy
+- Xem xét động đất + hệ số điều chỉnh
+
+### N.6 Tiêu Chí Công Trình Không Khung
+- Mối nối dọc mái: **bắt buộc** phải liên kết
+- Mối nối dọc tường: tùy chọn nhưng có lợi độ cứng
+- Phương pháp phân tích vs FE: phụ thuộc kết nối mối nối
+- Tác dụng màng cho cắt mặt phẳng
+- Ràng buộc xoắn qua độ cứng lò xo xoắn
+
+---
+
+*Cấu trúc mindmap dựa trên sản phẩm dự án EASIE FP7 và Khuyến Nghị Châu Âu cho Panel Sandwich*
+*Bản dịch tiếng Việt - 02-05-2026 - Giai đoạn 5 Hoàn Thành*</div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // Language Switcher
+        function switchLanguage(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update content visibility
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById('content-' + lang).classList.add('active');
+
+            // Save preference to localStorage
+            localStorage.setItem('easie-language', lang);
+
+            // Update URL hash
+            window.location.hash = lang;
+
+            // Re-initialize markmap for the active content
+            setTimeout(() => {
+                if (window.markmap && window.markmap.autoLoader) {
+                    window.markmap.autoLoader.load();
+                }
+            }, 100);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check URL hash first
+            const hash = window.location.hash.replace('#', '');
+            if (hash === 'vi' || hash === 'en') {
+                switchLanguage(hash);
+                return;
+            }
+
+            // Check localStorage preference
+            const savedLang = localStorage.getItem('easie-language');
+            if (savedLang && (savedLang === 'en' || savedLang === 'vi')) {
+                switchLanguage(savedLang);
+                return;
+            }
+
+            // Auto-detect browser language (optional)
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang && browserLang.toLowerCase().startsWith('vi')) {
+                switchLanguage('vi');
+            } else {
+                // Default to English
+                switchLanguage('en');
+            }
+        });
+
+        // Handle hash changes
+        window.addEventListener('hashchange', function() {
+            const hash = window.location.hash.replace('#', '');
+            if (hash === 'vi' || hash === 'en') {
+                switchLanguage(hash);
+            }
+        });
+    </script>
 </body>
 </html>
