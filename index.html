@@ -570,10 +570,66 @@
 - EASIE final report (Part 2)
 - Related PhD theses and papers
 
+## N. Phase 4-5: Deep Technical Knowledge (Formulas, Cost, Workflows)
+
+### N.1 Advanced Formulas
+- **Combined bending with creep**: `M^I = [M_W + M_ΔT + M_S(1+φ) + M_G(1+φ)] × α`
+- **Amplification factor**: `α = 1 / (1 - N/N_cr)`
+- **Elastic buckling**: `N_cr = N_ki / (1 + N_ki/GA)`
+- **Panel bending stiffness**: `B_S = E_F · (A_F1·A_F2)/(A_F1+A_F2) · e²`
+- **Direct fixing resistance**: `F_Rk = 4.2 · √(t_F² · d1) · f_u,F2`
+- **Wrinkling stress**: `σ_cr,w = 3/∛9 · ∛(2·E_I·G_C·E_C)`
+- **DBT correction**: `R_adj = R_obs · (f_y/f_y,obs)^α · (t/t_obs)^β`
+
+### N.2 D3.5 Calculation Examples
+- Axial load distribution to faces
+- Face stress (axial + bending)
+- Core shear stress calculation
+- Temperature deflection (summer/winter)
+- Initial imperfection e₀ (capped 10mm)
+- Equivalent line loads (self-weight, snow)
+- Second-order amplification factor α
+- Buckling load Ncr with GA coupling
+- Combined moment with creep (PUR vs MW comparison)
+- Connection shear vector + stiffness per unit length
+
+### N.3 Cost Estimation Models
+- **Material cost**: `C_panel = C_core + C_faces + C_coating + C_profit`
+- **Installation cost**: `C_install = C_labor×Hours + C_equipment + C_scaffold`
+- **Total project**: `C_total = Area×[C_material+C_install]×Regional_factor + Fixed`
+- Worked example: 1,000 m² cold storage
+- PUR vs EPS vs Mineral Wool cost comparison
+- Lifecycle cost (maintenance, energy ROI)
+
+### N.4 Inspection Workflows
+- **Pre-installation**: material receipt, fastener approval, substructure verify, design docs review
+- **During installation**: angle/depth/torque QC, seal compression, cold storage vapor barrier
+- **Post-installation**: visual acceptance, air/water tightness test, as-built documentation
+- **Repair workflow**: abrade → indent → apply material → finish → verify
+- Special checklists: cold storage, fire-rated, post-earthquake
+
+### N.5 Decision Trees
+- Core material selection (PUR/EPS/MW criteria)
+- Face material selection (Steel/Al/GFRP)
+- Thickness selection (thermal vs structural governing)
+- Fixing method (direct/concealed/torsional/frameless)
+- Opening reinforcement (adapter/punctual/bonded/frame)
+- Design method (DBC vs DBT selection criteria)
+- Retrofitting decision (repair/cladding/replace)
+- Fire resistance selection tree
+- Seismic considerations + adjustment factors
+
+### N.6 Frameless Building Criteria
+- Roof longitudinal joints: **must** be connected
+- Wall longitudinal joints: optional but stiffness benefit
+- Analytic vs FE method: depends on joint connectivity
+- Diaphragm action for in-plane shear
+- Torsional restraint via rotational spring stiffness
+
 ---
 
 *Mindmap structure based on EASIE FP7 Project deliverables and European Recommendations for Sandwich Panels*
-*Last updated: April 2026*</div>
+*Last updated: May 2026 - Phase 5 Complete*</div>
     </div>
 </body>
 </html>
